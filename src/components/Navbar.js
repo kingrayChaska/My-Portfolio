@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <header className="bg-gray-800 md:sticky top-0 z-10">
-      <div className="container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center">
+      <div className="container mx-auto flex flex-wrap p-3 flex-col md:flex-row">
         <a className="title-font font-medium text-white mb-2 md:mb-0">
           <img
             src="chaska-codes-high-resolution-logo-white-transparent.png"
@@ -49,10 +49,10 @@ const Navbar = () => {
             Testimonials
           </a>
         </nav>
-        <div className="flex items-center">
+        <div className="flex items-center justify-center ">
           <a
             className="mr-5 text-2xl hover:text-green-400"
-            href="https://github.com/hens-virtuella-varld"
+            href="https://github.com/kingrayChaska"
             target="_blank"
             rel="noreferrer"
           >
@@ -68,7 +68,7 @@ const Navbar = () => {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center font-medium bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:text-gray-200 hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+            className="flex items-center font-medium bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:text-gray-200 hover:bg-green-700 rounded text-base md:mt-0"
           >
             Hire Me
             <ArrowRightIcon className="w-4 h-4 ml-1" />

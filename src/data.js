@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: "Developed the entire frontend for an AI course generator",
+    title: "Sally an AI course generator",
     subtitle: "Next.js(React), TypeScript & REST APIs",
     description:
       "I was the main developer for this frontend UI project. I helped design the UI and ensured that it aligned with the design system;",
     image: "./Sally.png",
-    link: "https://youtu.be/sRKiAEfuiVk",
+    link: "https://sallyai2.netlify.app/dashboard",
   },
   {
     title: "Countries Info App",
@@ -23,14 +23,14 @@ export const projects = [
     image: "./orion.gif",
     link: "https://orion-psykoterapigruppen.netlify.app/",
   },
-  {
-    title: "NFT Shop",
-    subtitle: "Next.js and SASS",
-    description:
-      "I did many pair programming with my teammates. I learned how to use Next.js, SASS and some libraries, and how to implement design system into code.",
-    image: "./nftShop.gif",
-    link: "https://monakinft.vercel.app/",
-  },
+  // {
+  //   title: "NFT Shop",
+  //   subtitle: "Next.js and SASS",
+  //   description:
+  //     "I did many pair programming with my teammates. I learned how to use Next.js, SASS and some libraries, and how to implement design system into code.",
+  //   image: "./nftShop.gif",
+  //   link: "https://monakinft.vercel.app/",
+  // },
   // {
   //   title: "Game App",
   //   subtitle: "JavaScript, HTML & CSS",
