@@ -1,4 +1,4 @@
-## Deployd site
+## Deployed site
 
 This is the porfolio's git repo for searching my frontend dev internship.
 The deployed site for this project:https://portfolio-main-mu-two.vercel.app
