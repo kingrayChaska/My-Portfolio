@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-16 px-6 bg-gray-800 shadow-lg">
         {/* Logo */}
         <a href="/" className="text-white font-bold text-xl">
-          <img src="ChaskaLogo.png" alt="lol" className="w-10" />
+          <img src="ChaskaLogo.png" alt="logo" className="w-10" />
         </a>
 
         {/* Desktop Menu */}
