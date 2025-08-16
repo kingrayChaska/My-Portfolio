@@ -1,57 +1,41 @@
-import { ArrowRightIcon } from "@heroicons/react/solid";
 import React, { useState } from "react";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { ArrowRightIcon } from "@heroicons/react/solid";
+import {
+  BsFacebook,
+  BsGithub,
+  BsLinkedin,
+  BsTwitter,
+  BsWhatsapp,
+} from "react-icons/bs";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 md:sticky top-0 z-10">
-      <div className="container mx-auto flex flex-wrap p-3 flex-col md:flex-row">
-        <a className="title-font font-medium text-white mb-2 md:mb-0">
-          <img
-            src="chaska-codes-high-resolution-logo-white-transparent.png"
-            className="h-10"
-            alt="Logo"
-          />
+    <header className="fixed top-0 left-0 w-full bg-gray-800 z-40">
+      <div className="flex justify-between items-center h-16 px-6 bg-gray-800 shadow-lg">
+        {/* Logo */}
+        <a href="/" className="text-white font-bold text-xl">
+          <img src="ChaskaLogo.png" alt="lol" className="w-10" />
         </a>
-        <button
-          className="inline-flex items-center text-white md:hidden focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
-        <nav
-          className={`${
-            isOpen ? "block" : "hidden"
-          } md:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700 flex flex-wrap items-center text-base justify-center`}
-        >
-          <a href="#projects" className="mr-5 font-medium hover:text-white">
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex space-x-6 text-white font-medium ">
+          <a href="#projects" className="hover:text-green-400">
             Past Work
           </a>
-          <a href="#skills" className="mr-5 font-medium hover:text-white">
+          <a href="#skills" className="hover:text-green-400">
             Skills
           </a>
-          <a href="#testimonials" className="mr-5 font-medium hover:text-white">
+          <a href="#testimonials" className="hover:text-green-400">
             Testimonials
           </a>
         </nav>
-        <div className="flex items-center justify-center ">
+
+        {/* Desktop Icons */}
+        <div className="hidden md:flex items-center space-x-4">
           <a
-            className="mr-5 text-2xl hover:text-green-400"
+            className="text-2xl hover:text-green-400"
             href="https://github.com/kingrayChaska"
             target="_blank"
             rel="noreferrer"
@@ -59,16 +43,145 @@ const Navbar = () => {
             <BsGithub />
           </a>
           <a
-            className="mr-5 text-2xl hover:text-blue-400"
-            href="https://www.linkedin.com/in/regan-y/"
+            className="text-2xl hover:text-blue-400"
+            href="https://www.linkedin.com/in/oluwaseun-raymond-6a1765241/"
             target="_blank"
             rel="noreferrer"
           >
             <BsLinkedin />
           </a>
           <a
+            className="text-2xl hover:text-blue-400"
+            href="https://www.x.com/Chaska44?s=09"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsTwitter />
+          </a>
+          <a
+            className="text-2xl hover:text-blue-700"
+            href="https://www.facebook.com/kingray.sama.3"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsFacebook />
+          </a>
+          <a
+            className="text-2xl hover:text-green-400"
+            href="https://whatsapp.com/dl/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsWhatsapp />
+          </a>
+          <a
             href="#contact"
-            className="flex items-center font-medium bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:text-gray-200 hover:bg-green-700 rounded text-base md:mt-0"
+            className="flex items-center font-medium text-white bg-green-700 py-1 px-3 rounded hover:bg-green-600"
+          >
+            Hire Me
+            <ArrowRightIcon className="w-4 h-4 ml-1" />
+          </a>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div className="space-y-1">
+            <span
+              className={`block h-0.5 w-6 bg-current transform transition duration-300 ${
+                isOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-current transition duration-300 ${
+                isOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-current transform transition duration-300 ${
+                isOpen ? "-rotate-45 -translate-y-1.5" : ""
+              }`}
+            />
+          </div>
+        </button>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out md:hidden z-30`}
+      >
+        <div className="flex flex-col items-start p-6 space-y-6">
+          <a
+            href="#projects"
+            className="hover:text-green-400"
+            onClick={() => setIsOpen(false)}
+          >
+            Past Work
+          </a>
+          <a
+            href="#skills"
+            className="hover:text-green-400"
+            onClick={() => setIsOpen(false)}
+          >
+            Skills
+          </a>
+          <a
+            href="#testimonials"
+            className="hover:text-green-400"
+            onClick={() => setIsOpen(false)}
+          >
+            Testimonials
+          </a>
+          <div className="flex space-x-4 pt-6">
+            <a
+              className="text-2xl hover:text-green-400"
+              href="https://github.com/kingrayChaska"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsGithub />
+            </a>
+            <a
+              className="text-2xl hover:text-blue-400"
+              href="https://www.linkedin.com/in/oluwaseun-raymond-6a1765241/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsLinkedin />
+            </a>
+            <a
+              className="text-2xl hover:text-blue-400"
+              href="https://www.linkedin.com/in/oluwaseun-raymond-6a1765241/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsTwitter />
+            </a>
+            <a
+              className="text-2xl hover:text-blue-700"
+              href="https://www.linkedin.com/in/oluwaseun-raymond-6a1765241/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsFacebook />
+            </a>
+            <a
+              className="text-2xl hover:text-green-400"
+              href="https://www.linkedin.com/in/oluwaseun-raymond-6a1765241/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsWhatsapp />
+            </a>
+          </div>
+          <a
+            href="#contact"
+            className="flex items-center font-medium text-white bg-green-700 py-2 px-4 rounded hover:bg-green-600 mt-6"
+            onClick={() => setIsOpen(false)}
           >
             Hire Me
             <ArrowRightIcon className="w-4 h-4 ml-1" />
