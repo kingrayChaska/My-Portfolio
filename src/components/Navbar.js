@@ -75,6 +75,14 @@ const Navbar = () => {
             <BsWhatsapp />
           </a>
           <a
+            className="text-2xl hover:text-green-400"
+            href="https://whatsapp.com/dl/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsInstagram />
+          </a>
+          <a
             href="#contact"
             className="flex items-center font-medium text-white bg-green-700 py-1 px-3 rounded hover:bg-green-600"
           >
