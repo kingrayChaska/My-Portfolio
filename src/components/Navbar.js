@@ -14,23 +14,24 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-800 z-40">
       <div className="flex justify-between items-center h-16 px-6 bg-gray-800 shadow-lg">
-        {/* Logo */}
-        <a href="/" className="text-white font-bold text-xl">
-          <img src="ChaskaLogo.png" alt="logo" className="w-10" />
-        </a>
-
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-6 text-white font-medium ">
-          <a href="#projects" className="hover:text-green-400">
-            Past Work
+        {/* Logo + Desktop Menu (moved beside logo) */}
+        <div className="flex items-center space-x-6">
+          <a href="/" className="text-white font-bold text-xl">
+            <img src="ChaskaLogo.png" alt="logo" className="w-10" />
           </a>
-          <a href="#skills" className="hover:text-green-400">
-            Skills
-          </a>
-          <a href="#testimonials" className="hover:text-green-400">
-            Testimonials
-          </a>
-        </nav>
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex space-x-6 text-white font-medium">
+            <a href="#projects" className="hover:text-green-400">
+              Past Work
+            </a>
+            <a href="#skills" className="hover:text-green-400">
+              Skills
+            </a>
+            <a href="#testimonials" className="hover:text-green-400">
+              Testimonials
+            </a>
+          </nav>
+        </div>
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center space-x-4">
@@ -75,18 +76,10 @@ const Navbar = () => {
             <BsWhatsapp />
           </a>
           <a
-            className="text-2xl hover:text-green-400"
-            href="https://whatsapp.com/dl/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <BsInstagram />
-          </a>
-          <a
             href="#contact"
             className="flex items-center font-medium text-white bg-green-700 py-1 px-3 rounded hover:bg-green-600"
           >
-            Hire Me
+            Download CV
             <ArrowRightIcon className="w-4 h-4 ml-1" />
           </a>
         </div>
@@ -191,7 +184,7 @@ const Navbar = () => {
             className="flex items-center font-medium text-white bg-green-700 py-2 px-4 rounded hover:bg-green-600 mt-6"
             onClick={() => setIsOpen(false)}
           >
-            Hire Me
+            Download CV
             <ArrowRightIcon className="w-4 h-4 ml-1" />
           </a>
         </div>
